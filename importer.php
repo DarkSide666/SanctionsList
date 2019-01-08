@@ -17,7 +17,7 @@ require_once 'config.php';
 error_reporting(E_ALL);
 
 // initialize app
-$app = new \sanctions\list\App();
+$app = new \SanctionsList\App();
 $app->init();
 
 // run imports

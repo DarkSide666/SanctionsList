@@ -1,5 +1,5 @@
 <?php
-namespace sanctions\list\Model;
+namespace SanctionsList\Model;
 
 class Sanction extends \atk4\data\Model
 {

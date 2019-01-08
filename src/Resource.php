@@ -1,7 +1,7 @@
 <?php
-namespace sanctions\list;
+namespace SanctionsList;
 
-use \sanctions\list\Exception;
+use \SanctionsList\Exception;
 
 abstract class Resource
 {
@@ -75,9 +75,9 @@ abstract class Resource
     /**
      * Import data in data model.
      *
-     * @param \sanctions\list\Model\Sanction
+     * @param \SanctionsList\Model\Sanction
      *
      * @return bool Success?
      */
-    abstract public function import(\sanctions\list\Model\Sanction $model);
+    abstract public function import(\SanctionsList\Model\Sanction $model);
 }

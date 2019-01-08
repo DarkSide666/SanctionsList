@@ -19,6 +19,6 @@
         "jdorn/sql-formatter": "*"
     },
     "autoload": {
-        "psr-4": {"sanctions\\list\\":"src/"}
+        "psr-4": {"SanctionsList\\":"src/"}
     }
 }

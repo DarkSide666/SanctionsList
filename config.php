@@ -11,27 +11,27 @@ $config['resources'] = [
     'ano' => [
         'url' => 'http://sankcijas.kd.gov.lv/files/consolidated.xml',
         //'url' => 'http://localhost/SanctionsList/docs/consolidated.xml',
-        'parser' => \sanctions\list\Resource\ANO::class,
+        'parser' => \SanctionsList\Resource\ANO::class,
     ],
     'ofac' => [
         'url' => 'http://sankcijas.kd.gov.lv/files/sdn.xml',
         //'url' => 'http://localhost/SanctionsList/docs/sdn.xml',
-        'parser' => \sanctions\list\Resource\OFAC::class,
+        'parser' => \SanctionsList\Resource\OFAC::class,
     ],
     'es_old' => [
         'url' => 'http://sankcijas.kd.gov.lv/files/global.xml',
         //'url' => 'http://localhost/SanctionsList/docs/global.xml',
-        'parser' => \sanctions\list\Resource\ES_OLD::class,
+        'parser' => \SanctionsList\Resource\ES_OLD::class,
     ],
     'es' => [
         'url' => 'http://sankcijas.kd.gov.lv/files/xmlFullSanctionsList_1_1.xml',
         //'url' => 'http://localhost/SanctionsList/docs/xmlFullSanctionsList_1_1.xml',
-        'parser' => \sanctions\list\Resource\ES::class,
+        'parser' => \SanctionsList\Resource\ES::class,
     ],
     'lv' => [
         'url' => 'http://sankcijas.kd.gov.lv/files/LV_national.xml',
         //'url' => 'http://localhost/SanctionsList/docs/LV_national.xml',
-        'parser' => \sanctions\list\Resource\LV::class,
+        'parser' => \SanctionsList\Resource\LV::class,
     ],
 ];
 

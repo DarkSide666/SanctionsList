@@ -1,5 +1,5 @@
 <?php
-namespace sanctions\list;
+namespace SanctionsList;
 
 class Migrator extends \atk4\schema\Migration
 {

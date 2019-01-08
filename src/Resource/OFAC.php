@@ -1,18 +1,18 @@
 <?php
-namespace sanctions\list\Resource;
+namespace SanctionsList\Resource;
 
-use \sanctions\list\Resource;
+use \SanctionsList\Resource;
 
 class OFAC extends Resource
 {
     /**
      * Import data in data model.
      *
-     * @param \sanctions\list\Model\Sanction
+     * @param \SanctionsList\Model\Sanction
      *
      * @return bool Success?
      */
-    public function import(\sanctions\list\Model\Sanction $model)
+    public function import(\SanctionsList\Model\Sanction $model)
     {
         // delete old data
         $this->owner->debug('Remove old data...');

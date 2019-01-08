@@ -1,5 +1,5 @@
 <?php
-namespace sanctions\list;
+namespace SanctionsList;
 
 /**
  * App class.
@@ -128,5 +128,17 @@ class App
         $success = $resource->import($m);
 
         return $success;
+    }
+
+    /**
+     * Outputs message to STDERR.
+     *
+     * @codeCoverageIgnore - replaced with "echo" which can be intercepted by test-suite
+     *
+     * @param string $message
+     */
+    protected function _echo_stderr($message)
+    {
+        file_put_contents('php://stderr', date('Y-m-d H:i:s').' '.$message);
     }
 }
