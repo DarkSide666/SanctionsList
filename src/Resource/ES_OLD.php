@@ -33,10 +33,9 @@ class ES_OLD extends Resource
         $cnt_ind = 0;
         foreach ($rows as $row) {
             $model->set([
-                'type'          => 'individual',
-                'first_name'    => (string) $row->NAME[0]->FIRSTNAME,
-                'last_name'     => (string) ((string) $row->NAME[0]->LASTNAME ?: $row->NAME[0]->WHOLENAME),
-                'country'       => (string) null, // no countries in this list
+                'type'    => 'individual',
+                'name'    => (string) $row->NAME[0]->WHOLENAME,
+                'country' => (string) null, // no countries in this list
             ]);
             $model->saveAndUnload();
             $cnt_ind++;
@@ -49,9 +48,9 @@ class ES_OLD extends Resource
         $cnt_ent = 0;
         foreach ($rows as $row) {
             $model->set([
-                'type'          => 'entity',
-                'last_name'     => (string) $row->NAME[0]->WHOLENAME,
-                'country'       => (string) null, // no countries in this list
+                'type'    => 'entity',
+                'name'    => (string) $row->NAME[0]->WHOLENAME,
+                'country' => (string) null, // no countries in this list
             ]);
             $model->saveAndUnload();
             $cnt_ent++;

@@ -33,10 +33,14 @@ class ANO extends Resource
         $cnt_ind = 0;
         foreach ($rows as $row) {
             $model->set([
-                'type'          => 'individual',
-                'first_name'    => (string) $row->FIRST_NAME,
-                'last_name'     => (string) $row->SECOND_NAME,
-                'country'       => (string) $row->INDIVIDUAL_ADDRESS->COUNTRY,
+                'type'    => 'individual',
+                'name'    => trim(join(' ', [
+                                (string) $row->FIRST_NAME,
+                                (string) $row->SECOND_NAME,
+                                (string) $row->THIRD_NAME,
+                                (string) $row->FOURTH_NAME,
+                            ])),
+                'country' => (string) $row->INDIVIDUAL_ADDRESS->COUNTRY,
             ]);
             $model->saveAndUnload();
             $cnt_ind++;
@@ -49,9 +53,9 @@ class ANO extends Resource
         $cnt_ent = 0;
         foreach ($rows as $row) {
             $model->set([
-                'type'          => 'entity',
-                'last_name'     => (string) $row->FIRST_NAME,
-                'country'       => (string) $row->ENTITY_ADDRESS->COUNTRY,
+                'type'    => 'entity',
+                'name'    => trim((string) $row->FIRST_NAME),
+                'country' => (string) $row->ENTITY_ADDRESS->COUNTRY,
             ]);
             $model->saveAndUnload();
             $cnt_ent++;

@@ -34,10 +34,12 @@ class OFAC extends Resource
         $cnt_ind = 0;
         foreach ($rows as $row) {
             $model->set([
-                'type'          => 'individual',
-                'first_name'    => (string) $row->firstName,
-                'last_name'     => (string) $row->lastName,
-                'country'       => (string) ($row->addressList->address ? $row->addressList->address->country : null),
+                'type'    => 'individual',
+                'name'    => trim(join(' ', [
+                                (string) $row->firstName,
+                                (string) $row->lastName,
+                            ])),
+                'country' => (string) ($row->addressList->address ? $row->addressList->address->country : null),
             ]);
             $model->saveAndUnload();
             $cnt_ind++;
@@ -51,9 +53,9 @@ class OFAC extends Resource
         $cnt_ent = 0;
         foreach ($rows as $row) {
             $model->set([
-                'type'          => 'entity',
-                'last_name'     => (string) $row->lastName,
-                'country'       => (string) ($row->addressList->address ? $row->addressList->address->country : null),
+                'type'    => 'entity',
+                'name'    => (string) $row->lastName,
+                'country' => (string) ($row->addressList->address ? $row->addressList->address->country : null),
             ]);
             $model->saveAndUnload();
             $cnt_ent++;
