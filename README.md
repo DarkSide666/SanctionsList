@@ -1,19 +1,19 @@
-# XML loader
+# Sanctions listing
 
 It loads Sanctions list XML files in database and then profive REST interface to do "Google search" by names.
 
-# Requirements
+## Requirements
 
 - PHP 7.x
 - PostgreSQL database
 - Composer
 
-# Installation
+## Installation
 
 - download and unzip this repo in folder
 - run `composer update`
 
-# Import script usage
+## Import script usage
 
 ``` bash
 php -e importer.php
