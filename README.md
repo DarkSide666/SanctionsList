@@ -2,6 +2,17 @@
 
 It loads Sanctions list XML files in database and then profive REST interface to do "Google search" by names.
 
+# Requirements
+
+- PHP 7.x
+- PostgreSQL database
+- Composer
+
+# Installation
+
+- download and unzip this repo in folder
+- run `composer update`
+
 # Import script usage
 
 ``` bash
