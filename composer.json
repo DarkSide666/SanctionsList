@@ -15,6 +15,7 @@
         "php": ">=7.1.0",
         "atk4/data": "dev-develop",
         "atk4/schema": "dev-develop",
+        "atk4/api": "dev-develop",
         "jdorn/sql-formatter": "*"
     },
     "autoload": {
