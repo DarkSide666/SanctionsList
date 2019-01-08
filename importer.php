@@ -20,6 +20,9 @@ error_reporting(E_ALL);
 $app = new \SanctionsList\App();
 $app->init();
 
+// do schema migration
+$app->schemaMigration();
+
 // run imports
 $app->import('ano');
 $app->import('ofac');

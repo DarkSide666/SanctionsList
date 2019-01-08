@@ -15,13 +15,13 @@ class App
     use \atk4\core\DebugTrait;
 
     /** @var string Data model class */
-    protected $model_class = Model\Sanction::class;
+    public $model_class = Model\Sanction::class;
 
     /** @var array type=>[url,parser] mapping */
-    protected $resources;
+    public $resources;
 
     /** @var \atk4\data\Persistence */
-    protected $db = null;
+    public $db = null;
 
     /**
      * Initialize app.
@@ -40,7 +40,7 @@ class App
         $this->dbConnect();
 
         // do schema migration
-        $this->schemaMigration();
+        //$this->schemaMigration();
     }
 
     /**
