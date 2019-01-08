@@ -18,8 +18,8 @@ GET https://host/search?q=Ali+Muhamed+Barbados
 Response:
 ```json
 [
-    {'name':'Ali Muhamed Barbados el Pipi', 'score':95},
-    {'name':'Ali Barbados Muhamed', 'score':90},
-    {'name':'Barbados Ali', 'score':65},
+    {"name":"Ali Muhamed Barbados el Pipi", "score":95},
+    {"name":"Ali Barbados Muhamed", "score":90},
+    {"name":"Barbados Ali", "score":65},
 ]
 ```
