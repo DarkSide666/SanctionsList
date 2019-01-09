@@ -11,9 +11,9 @@ error_reporting(E_ALL);
 // initialize API app
 $api = new \atk4\api\Api();
 
-// Dummpy service
-$api->get('/', function() {
-    return 'API services works!';
+// Dummy service
+$api->get('/ping', function() {
+    return 'pong';
 });
 
 // Methods can accept arguments, and everything is type-safe.
