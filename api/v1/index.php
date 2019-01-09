@@ -41,3 +41,6 @@ $api->get('/search/:q', function ($q) {
     // response
     return $m->export(['rank','list','type','name','country','sync_time'/*,'tags','query'*/]);
 });
+
+// No service matched request
+die('No service was called');
