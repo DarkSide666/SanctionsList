@@ -2,6 +2,7 @@
 
 // database connection
 $config['dsn'] = 'pgsql://user:pass@localhost:5432/sanctions';
+//$config['dsn'] = 'sqlite:sanctions.db';
 
 // is debug mode enabled ?
 $config['debug'] = true;

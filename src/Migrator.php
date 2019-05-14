@@ -1,6 +1,8 @@
 <?php
 namespace SanctionsList;
 
+// DEPRECATED CLASS - WILL USE ATK4\SCHEMA\MIGRATION\PGSQL INSTEAD !!!
+
 class Migrator extends \atk4\schema\Migration
 {
     /** @var string Expression to create primary key */

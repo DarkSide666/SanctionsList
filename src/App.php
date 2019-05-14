@@ -98,7 +98,8 @@ class App
     {
         $m = $this->add(new $this->model_class($this->db));
         $this->debug('Start database migration...');
-        $changes = (new Migrator($m))->migrate();
+        //$changes = (new Migrator($m))->migrate();
+        $changes = (\atk4\schema\Migration::getMigration($m))->migrate();
         $this->debug('Migration finished: '.$changes);
     }
 
